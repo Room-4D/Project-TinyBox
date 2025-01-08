@@ -1,10 +1,10 @@
-import { userTable, sessionTable } from '@/lib/data/schema';
-import db from '@/lib/data';
+import { userTable, sessionTable } from '@/drizzle/schema';
+import db from '@/drizzle';
 import { eq } from 'drizzle-orm';
 import { encodeBase32LowerCaseNoPadding, encodeHexLowerCase } from '@oslojs/encoding';
 import { sha256 } from '@oslojs/crypto/sha2';
 
-import type { User, Session } from '@/lib/data/schema';
+import type { User, Session } from '@/drizzle/schema';
 import { cache } from 'react';
 import { cookies } from 'next/headers';
 
